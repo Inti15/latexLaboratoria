@@ -11,7 +11,7 @@
 \RequirePackage[hmargin=2cm,vmargin=3cm]{geometry}
 \RequirePackage[Glenn]{fncychap}
 \RequirePackage{url}
-
+\usepackage{tocloft}
 
 \pagestyle{fancy}
 \fancyhead[LE]{\includegraphics[height=40pt]{laboratoria/img/laboratoria_l}} 
@@ -21,4 +21,8 @@
 \fancyfoot{}
 \fancyfoot[LE,RO]{\thepage}
 
+\@addtoreset{section}{part}
 \renewcommand{\thesection}{Lección \arabic{section}}
+\cftsetindents{section}{1em}{5em}
+
+\let\cleardoublepage\clearpage
